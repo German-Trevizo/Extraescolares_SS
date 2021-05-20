@@ -1,0 +1,113 @@
+*{
+    padding: 0%;
+    margin: 0%;
+   }
+   
+   body{
+       background-color: #4d4d4d;    
+   }
+   .contenedor{
+       background-color: white;
+       position: absolute;
+       width: 50%;
+       height: 1600px;
+       top: 10%;
+       left: 25%;
+       border: 2px solid #4d4d4d;
+       border-radius: 50px;
+       display: block;
+   }
+   .contenedor > .logo {
+       display: block;
+       text-align: center;
+       padding: 10px;
+   } 
+   
+   .contenedor .titulo-prin{
+       text-align: center;
+       padding: 30px;
+   
+   }
+   
+   
+   .contenedor  .intrucciones{
+       text-align: justify;
+       padding-left: 30px;
+       padding-right: 30px;
+   
+   }
+   
+   .contenedor .intrucciones p{
+       display: block;
+       font-size: 1.2rem;
+   }
+   
+   .contenedor .grupo {
+       display: flex;
+       padding-left: 30px;
+       padding-top: 20px;
+       
+   }
+   
+   .contenedor .grupo select {
+       width: 250px;
+       margin-left: 20px;
+       
+       
+   }
+   
+   .liker{
+       padding-top: 20px;
+       padding-left: 30px;
+   }
+   
+   .liker ul{
+       text-decoration: none;
+       list-style: none;
+       padding-top: 13px;
+   }
+   
+   .preguntas{
+       padding-top: 20px;
+       padding-left: 30px;
+       display: inline-flex;
+      
+   }
+   
+   .preguntas .pregunta li{
+       text-align: justify;
+       list-style: none;
+       padding-top: 10px;
+       width: 600px;
+   }
+   
+   
+   .preguntas .respuesta{
+       padding-top: 15px;
+       margin-left: 100px;
+   }
+   
+   .preguntas .respuesta li{
+       text-align: none;
+       list-style: none;
+       padding-top: 10px;
+   }
+   
+   .com{
+       padding-left: 30px;
+       padding-top: 15px;
+   }
+   
+   .com textarea{
+       margin-top: 10px;
+       width: 96%;
+       font-family: Arial, Helvetica, sans-serif;
+       font-size: 1rem;
+       border-radius: 20px;
+   }
+
+   .fot{
+       display: flex;
+       justify-content: space-between;
+       margin: 20px;
+   }

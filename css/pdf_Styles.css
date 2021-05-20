@@ -1,0 +1,114 @@
+.contenedor{
+    display: block;
+}
+
+.fol {
+    display: block;
+    text-align: right;
+   
+} 
+.fol a {
+    margin: 5px;
+    text-decoration: none;
+    color: red;
+} 
+
+.logo {
+    display: block;
+    text-align: center;
+} 
+
+.titulo-prin{
+    margin: 1.5px;
+    text-align: center;
+    display: block;
+    font-size: 7px;
+
+}
+
+.intrucciones{
+    text-align: justify;
+    font-size: 12.5px;
+}
+
+.contenedor .grupo {
+    display: flex;
+}
+
+.contenedor .grupo a {
+    font-size: 12.5px;
+    text-decoration: none;
+    color: black;
+}
+
+.liker{
+    font-size: 12.5px;
+    text-align: justify;
+    padding: 0%;
+    margin: 0%;
+}
+
+.liker ul{
+    margin: 0%;
+    padding: 0%;
+}
+
+.liker ul li{
+    text-decoration: none;
+    list-style: none;
+    
+}
+
+.preguntas{
+    margin: 0%;
+    padding: 0%;
+    font-size: 12.5px;
+    justify-content: space-between;
+}
+
+.preguntas h4{
+    margin-bottom: 0%;
+
+}
+.preguntas .pregunta ol{
+    margin: 0%;
+    padding: 0%;
+    text-align: justify;
+    list-style: none;
+    text-decoration: none;
+}
+.preguntas .pregunta ol li a{  
+    text-align: justify;
+    text-decoration: none;
+    color: black;
+}
+
+.com{
+    text-align: justify;
+    font-size: 12.5px;
+    
+}
+
+
+.com h4{
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+}
+
+.com p{
+    margin: 0%;
+    padding: 0%;
+}
+
+footer{
+    font-size: 12.5px;
+   
+
+}
+
+.fot {
+    display: block;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
