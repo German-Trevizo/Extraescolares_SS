@@ -319,6 +319,11 @@ HEADER
   height: 80px;
 }
 
+.imgLogo2{
+    width: 150px;
+    height: 150px;
+  }
+
 /*  color: #512f80 !important;*/
 .navbar-nav .has-submenu .dropdown-menu li a {
     padding: 14px 20px;
