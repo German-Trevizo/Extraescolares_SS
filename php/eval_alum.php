@@ -48,6 +48,7 @@ session_start();
     <link rel="stylesheet" href="../css/carousel.css">
     <link rel="stylesheet" href="../css/animate.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link href="../css/style2.css" rel="stylesheet">
 <!-- Google Tag Manager -->
 
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
