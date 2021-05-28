@@ -1,7 +1,7 @@
 <?php 
 
 $server="localhost";
-$nombreBD="serviciosocial";
+$nombreBD="php_extra";
 $user="root";
 $pass="";
 $coneccion = new mysqli($server, $user, $pass, $nombreBD);

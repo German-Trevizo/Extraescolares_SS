@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="./dashboard/dist/css/adminlte.min.css">
 </head>
 
-<body class="hold-transition login-page hola" style="background: url(../Introduccion_php/img/tec2.jpg); background-size: cover">
+<body class="hold-transition login-page hola" style="background: url(../Extraescolares_SS/img/tec2.jpg); background-size: cover">
   <div class="login-box">
     <div class="login-logo">
       <h2><b>Bienvenido </b>Coach</h2>

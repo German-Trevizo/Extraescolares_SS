@@ -46,7 +46,15 @@
                     <a href="extraescolares_ss" class="nav-link">
                         <i class="nav-icon fas fa-address-book"></i>
                         <p>
-                            Productos
+                            Cedula de Registro
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="extraescolares_ss" class="nav-link">
+                        <i class="nav-icon fas fa-address-book"></i>
+                        <p>
+                            Evaluaciones
                         </p>
                     </a>
                 </li>
