@@ -18,7 +18,7 @@ ob_start();
 	$pdf->AddPage();
 	$pdf->AddFont('CalibriR','','calibri-regular.php');
 	$pdf->AddFont('Calibri','','calibri-bold.php');
-	$pdf->Image('images/itsncg.jpg',28,9, 19, 20);
+	$pdf->Image('../img/itsncg.jpg',28,9, 19, 20);
 	$pdf->SetFont('Arial','B',16);    
 	$textypos = 5;
 	$pdf->setY(8);
