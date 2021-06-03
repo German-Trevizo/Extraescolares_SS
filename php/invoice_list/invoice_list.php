@@ -51,9 +51,26 @@ foreach($invoiceList as $invoiceDetails){
 ?>
 </table>	
 </div>	
-<script>  
+<script type="text/javascript">
  $(document).ready(function(){  
-      $('#data-table').DataTable();  
- });  
- </script>  
+      $('#data-table').DataTable( {
+      "language":{
+    "lengthMenu": "Mostrar _MENU_ registros",
+    "zeroRecords": "No se encontaron resultados",
+    "info": "Mostrando registros del _START_al _END_ de un total de _TOTAL_ registros",
+    "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+    "infoFiltered":"(filtrado de un total de _MAX_ registros)",
+    "sSearch": "Buscar:",
+    "oPaginate": {
+        
+    "sFirst": "Primero",
+    "sLast": "Último",
+    "sPrevious":"Anteriror",
+    "sNext": "Siguiente",
+    
+}, 
+"sProcessing": "Procesando...",
+ }
+})});
+ </script>   
 <?php include('../footer.php');?>
