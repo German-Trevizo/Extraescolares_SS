@@ -35,7 +35,7 @@ $userData = $_SESSION['userData'];
         <?php include "./layouts/sidebar.php" ?>
 
         <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
+        <div class="content-wrapper" style="background-image: url(./img/tec2.jpg);">
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <div class="container-fluid">
