@@ -1,46 +1,59 @@
-<?php 
-session_start();
+<?php
+/*session_start();*/
+
+
 include('header.php');
+
+
 $loginError = '';
-if (!empty($_POST['email']) && !empty($_POST['pwd'])) {
-	include 'Invoice.php';
-	$invoice = new Invoice();
-	$user = $invoice->loginUsers($_POST['email'], $_POST['pwd']); 
-	if(!empty($user)) {
-		$_SESSION['user'] = $user[0]['nombre']."".$user[0]['apellido'];
-		$_SESSION['userid'] = $user[0]['id'];
-		$_SESSION['email'] = $user[0]['email'];		
-		$_SESSION['numcontrol'] = $user[0]['numcontrol'];
-		
-		header("Location: invoice_list/invoice_list.php");
-	} else {
-		$loginError = "Invalid email or password!";
-	}
+if (!empty($_POST['email']) && !empty($_POST['pass'])) {
+    include 'Invoice.php';
+    $invoice = new Invoice();
+    $user = $invoice->loginUsers($_POST['email'], $_POST['pass']);
+
+
+    if (!empty($user)) {
+        /*
+        $_SESSION['user'] = $user[0]['nombre'] . "" . $user[0]['apellido'];
+        $_SESSION['userid'] = $user[0]['id'];
+        $_SESSION['email'] = $user[0]['email'];
+        $_SESSION['numcontrol'] = $user[0]['numcontrol'];
+*/
+        header("Location: invoice_list/invoice_list.php");
+    } else {
+        $loginError = "Invalid email or password!";
+    }
 }
+
+
 ?>
-<title>ITSNCG</title>
-<script src="js/invoice.js"></script>
-<link href="../css/style2.css" rel="stylesheet">
-<header class="header ">
-    <div class="topbar clearfix">
-        <div class="container">
-            <div class="row-fluid">
-                <div class="col-md-6 col-sm-6 text-left">
-                    <p>
-                        <strong><i class="fa fa-phone"></i></strong> (636) 692-95-00 EXT.18 &nbsp;&nbsp;
 
-                    </p>
-                </div><!-- end left -->
-                <div class="col-md-6 col-sm-6 hidden-xs text-right">
-                    <div class="social">
-                        <a class="facebook" href="https://www.facebook.com/comunicacion.itsncg/" target="_blank"
-                        data-tooltip="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
-                    </div><!-- end social -->
-                </div><!-- end left -->
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end topbar -->
+<header>
+    <title>ITSNCG</title>
+    <script src="js/invoice.js"></script>
+    <link href="../css/style2.css" rel="stylesheet">
+    <header class="header ">
+        <div class="topbar clearfix">
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="col-md-6 col-sm-6 text-left">
+                        <p>
+                            <strong><i class="fa fa-phone"></i></strong> (636) 692-95-00 EXT.18 &nbsp;&nbsp;
 
+                        </p>
+                    </div><!-- end left -->
+
+                    <div class="col-md-6 col-sm-6 hidden-xs text-right">
+                        <div class="social">
+                            <a class="facebook" href="https://www.facebook.com/comunicacion.itsncg/" target="_blank" data-tooltip="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
+                        </div><!-- end social -->
+                    </div><!-- end left -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div>
+        <!-- end topbar -->
+
+        <!--  
     <div class="container">
         <nav class="navbar navbar-default yamm">
             <div class="navbar-header">
@@ -129,40 +142,42 @@ if (!empty($_POST['email']) && !empty($_POST['pwd'])) {
                 </ul>
             </div>
         </nav><!-- end navbar -->
-    </div><!-- end container -->
-</header>
-<?php include('container.php');?>
-<div class="row">	
-  <div class="col-xs-6">
-  
-<div class="heading">
-		<!-- <h2>Actividades Extraescolares</h2> -->
-	</div>
-<div class="login-form">
-<form action="" method="post">
-    <h2 class="text-center">Iniciar Sesión</h2>  
-<div class="form-group">
-<?php if ($loginError ) { ?>
-<div class="alert alert-warning"><?php echo $loginError; ?></div>
-<?php } ?>
-</div>         
-<div class="form-group">
-    <input name="email" id="email" type="email" class="form-control" placeholder="Email numcontrol" autofocus required>
-</div>
-<div class="form-group">
-    <input type="password" class="form-control" name="pwd" placeholder="Password" required>
-</div> 
-<div class="form-group">
-    <button type="submit" name="login" class="btn btn-primary" style="width: 100%;"> Acceder </button>
-</div>
-<div class="clearfix">
-<label class="pull-left checkbox-inline"><input type="checkbox"> Recordarme</label>
-</div>        
-</form>
-</div>   
 
-</div>
-<div class="col-xs-6">-</div>	
-</div>		
-</div>
-<?php include('footer.php');?>
+        <!--   </div><!-- end container -->
+
+    </header>
+    <?php include('container.php'); ?>
+    <div class="row">
+        <div class="col-xs-6">
+
+            <div class="heading">
+                <!-- <h2>Actividades Extraescolares</h2> -->
+            </div>
+            <div class="login-form">
+                <form action="" method="post">
+                    <h2 class="text-center">Iniciar Sesión</h2>
+                    <div class="form-group">
+                        <?php if ($loginError) { ?>
+                            <div class="alert alert-warning"><?php echo $loginError; ?></div>
+                        <?php } ?>
+                    </div>
+                    <div class="form-group">
+                        <input id="email" type="email" class="form-control" placeholder="Email" autofocus required name="email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="pass" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" name="login" class="btn btn-primary" style="width: 100%;"> Acceder </button>
+                    </div>
+                    <div class="clearfix">
+                        <label class="pull-left checkbox-inline"><input type="checkbox"> Recordarme</label>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="col-xs-6">-</div>
+    </div>
+    </div>
+    <?php include('footer.php'); ?>

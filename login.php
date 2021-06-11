@@ -28,7 +28,7 @@
 
         <form action="../extraescolares_ss/php/login.php" method="post">
           <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="usuario" name="user">
+            <input type="text" class="form-control" placeholder="Email" name="email">
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-envelope"></span>

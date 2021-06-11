@@ -5,7 +5,11 @@ $userData=$_SESSION['userData'];
 
 include "./php/conexion.php";
 
-$resultado = $coneccion->query("select * from usuarios order by id DESC") or die($coneccion->error);
+$resultado = $coneccion->query("select * from user_adm order by id_user DESC") or die($coneccion->error);
+
+
+
+
 ?>
 
 
@@ -96,21 +100,24 @@ $resultado = $coneccion->query("select * from usuarios order by id DESC") or die
                                 <input type="text" class="form-control" placeholder="Inserta tu nombre" name="nombre" id="txtNombre" required>
                             </div>
                             <div class="col-4">
-                                <label for="">Apellido</label>
-                                <input type="text" class="form-control" placeholder="Inserta tu apellido" name="ap" required>
+                                <label for="">Apellido Paterno</label>
+                                <input type="text" class="form-control" placeholder="Inserta tu apellido" name="app" required>
                             </div>
-
+                            <div class="col-4">
+                                <label for="">Apellido Materno</label>
+                                <input type="text" class="form-control" placeholder="Inserta tu apellido" name="apm" required>
+                            </div>
                             <div class="col-4">
                                 <label for="">Email</label>
                                 <input type="email" class="form-control" placeholder="Inserta tu Email" name="email" required>
                             </div>
                             <div class="col-4">
                                 <label for="">Password</label>
-                                <input type="password" class="form-control" placeholder="Inserta tu password" name="p1" required>
+                                <input type="password" class="form-control" placeholder="Inserta tu password" name="pass1" required>
                             </div>
                             <div class="col-4">
-                                <label for="">Confirmar Passwo</label>
-                                <input type="password" class="form-control" placeholder="Inserta tu confirma" name="p2" required>
+                                <label for="">Confirmar Password</label>
+                                <input type="password" class="form-control" placeholder="Inserta tu confirma" name="pass2" required>
                             </div>
                             <div class="col-4 p-2">
                                 <br>
@@ -138,9 +145,10 @@ $resultado = $coneccion->query("select * from usuarios order by id DESC") or die
                             <thead>
                                 <th>Id</th>
                                 <th>Nombre</th>
-                                <th>Apellido</th>
-                                <th>Password</th>
-                                <th></th>
+                                <th>Apellido Paterno</th>
+                                <th>Apellido Materno</th>
+                                <th>Email</th>
+                                <th>Accion</th>
                             </thead>
                             <?php
                             while ($fila = mysqli_fetch_array($resultado)) {
@@ -148,10 +156,11 @@ $resultado = $coneccion->query("select * from usuarios order by id DESC") or die
                             ?>
                                 <tbody>
                                     <tr>
-                                        <td><?php echo $fila['id'] ?></td>
-                                        <td><?php echo $fila['Nombre'] ?></td>
-                                        <td><?php echo $fila['Apellidos'] ?></td>
-                                        <td><?php echo $fila['Password'] ?></td>
+                                        <td><?php echo $fila['id_user'] ?></td>
+                                        <td><?php echo $fila['name'] ?></td>
+                                        <td><?php echo $fila['last_name'] ?></td>
+                                        <td><?php echo $fila['mlast_name'] ?></td>
+                                        <td><?php echo $fila['email'] ?></td>
                                         <td>
                                             <button class="btn btn-sm btn-warning btnEditar" data-id="<?php echo $fila['id'] ?>" data-nome="<?php echo $fila['nombre'] ?>" data-ap="<?php echo $fila['apellido'] ?>" data-email="<?php echo $fila['email'] ?>" data-toggle="modal" data-target="#modal-editar">
                                                 <i class="fa fa-edit"></i>

@@ -1,10 +1,14 @@
 <?php 
+
 session_start();
+$userData = $_SESSION['userData'];
 include('../header.php');
 include '../Invoice.php';
 $invoice = new Invoice();
 $invoice->checkLoggedIn();
+
 ?>
+
 <title>Cedula de Inscripción a Grupo Cultural o Deportivo.</title>
 <script src="../../js/invoice.js"></script>
 <link href="../../css/style2.css" rel="stylesheet">
@@ -13,8 +17,9 @@ $invoice->checkLoggedIn();
            <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>  
            <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>            
            <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />  
-    
-<?php include('../container.php');?>
+ 
+<?php /* include('../container.php');*/?>
+
 <div class="container">		
 <h2 class="title">AJEDREZ.</h2>
 <?php include('../menu.php');?>			  

@@ -1,5 +1,6 @@
 <?php 
 session_start();
+$userData = $_SESSION['userData'];
 include('../header.php');
 include '../Invoice.php';
 $invoice = new Invoice();
