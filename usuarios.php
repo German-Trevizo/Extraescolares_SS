@@ -1,15 +1,11 @@
 <?php
 session_start();
-if(!isset($_SESSION['userData'])){ header("Location: ./login.php");}
-$userData=$_SESSION['userData'];
-
+if (!isset($_SESSION['userData'])) {
+    header("Location: ./login.php");
+}
+$userData = $_SESSION['userData'];
 include "./php/conexion.php";
-
 $resultado = $coneccion->query("select * from user_adm order by id_user DESC") or die($coneccion->error);
-
-
-
-
 ?>
 
 

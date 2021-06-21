@@ -36,7 +36,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="php/invoice_list/invoice_list.php" class="nav-link">
+                    <!--  <a href="php/invoice_list/invoice_list.php" class="nav-link">  -->
+                    <a href="./cedulas.php" class="nav-link">
                         <i class="nav-icon fas fa-address-book"></i>
                         <p>
                             Cedula de Registro

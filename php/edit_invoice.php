@@ -3,7 +3,9 @@ session_start();
 include('header.php');
 include 'Invoice.php';
 $invoice = new Invoice();
-$invoice->checkLoggedIn2();
+$invoice->checkLoggedIn();
+
+
 if(!empty($_POST['nombre']) && $_POST['nombre'] && !empty($_POST['invoiceId']) && $_POST['invoiceId']) {	
 	$invoice->updateInvoice($_POST);	
 	header("Location: invoice_list/invoice_list.php");	
@@ -220,7 +222,7 @@ if(!empty($_GET['update_id']) && $_GET['update_id']) {
    
     <br>
     <div class="form-group">
-		<input type="hidden" value="<?php echo $_SESSION['userid']; ?>" class="form-control" name="userId">
+		<input type="hidden" value="<?php echo $_SESSION['ID']; ?>" class="form-control" name="userId">
 		<input type="hidden" value="<?php echo $invoiceValues['idced']; ?>" class="form-control" name="invoiceId" id="invoiceId">
         <input data-loading-text="Actualizando..." type="submit" name="invoice_btn" value="Actualizar" class="btn btn-success submit_btn invoice-save-btm">						
     </div>
