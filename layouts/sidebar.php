@@ -1,7 +1,9 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <div >
-    <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="" style="width: 100px;height: 100px;">
+    <br>
+    
+    <img src="./img/deporte.png"  alt="Responsive image" class="rounded mx-auto d-block" align="center" style=" left: 10px; width: 100px;height: 100px;">
     </div>
 
     <span class="brand-link brand-text font-weight-light" style="text-align: center; display:block;"><b>Bienvenido</b> <br> <?php echo $userData['NOM'] . " " . $userData['APP'] ?></span>

@@ -222,7 +222,7 @@ if(!empty($_GET['update_id']) && $_GET['update_id']) {
    
     <br>
     <div class="form-group">
-		<input type="hidden" value="<?php echo $_SESSION['ID']; ?>" class="form-control" name="userId">
+		<input type="hidden" value="<?php $userData = $_SESSION['userData']; echo $userData['ID']; ?>" class="form-control" name="userId">
 		<input type="hidden" value="<?php echo $invoiceValues['idced']; ?>" class="form-control" name="invoiceId" id="invoiceId">
         <input data-loading-text="Actualizando..." type="submit" name="invoice_btn" value="Actualizar" class="btn btn-success submit_btn invoice-save-btm">						
     </div>

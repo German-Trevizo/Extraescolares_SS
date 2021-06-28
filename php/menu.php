@@ -1,3 +1,4 @@
+
 <ul class="nav navbar-nav">
 	<!-- 
 <li class="dropdown">
@@ -10,7 +11,7 @@
  -->
 	<li class="dropdown">
 		<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">Cédula
-			<span class="caret"></span></button>
+			
 		<ul class="dropdown-menu">
 			<li><a href="php/invoice_list/invoice_list.php">AJEDREZ</a></li>
 			<li><a href="php/invoice_list/invoice_list3.php">ATLETISMO</a></li>

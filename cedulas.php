@@ -24,8 +24,12 @@ $invoice->checkLoggedIn();
     <!-- Theme style -->
     <link rel="stylesheet" href="./dashboard/dist/css/adminlte.min.css">
     <!-- hojas de estilos paloma -->
-    <link rel="stylesheet" href="../../css/style2.css">
-   
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+   <link rel="stylesheet" href="//cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" />
+   <!--  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+ -->
+
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -43,10 +47,11 @@ $invoice->checkLoggedIn();
         <div class="content-wrapper" style="background-image: url(./img/tec2.jpg);">
             <!-- Content Header (Page header) -->
             <section class="content-header">
+            
                 <div class="container-fluid">
                     <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <h1>Inicio</h1>
+                        <div class="col-sm-8">
+                            <h1>Cedula de Inscripción a Grupo Cultural o Deportivo.</h1>
                         </div>
                     </div>
                 </div><!-- /.container-fluid -->
@@ -59,7 +64,7 @@ $invoice->checkLoggedIn();
                 <div class="card">
                
                     <div class="card-header">
-                        <h3 class="card-title"> Grupo Cultural, Civico o Deportivo </h3>
+                        <h3 class="card-title"> BASQUET BOL</h3>
 
                         <div class="card-tools">
                             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -69,7 +74,7 @@ $invoice->checkLoggedIn();
                     </div>
                     <div class="card-body">
                         <div class="container">
-                            <h2 class="title">AJEDREZ</h2>
+                          
                             <?php include('./php/menu.php'); ?>
                             <table id="data-table" class="table table-condensed table-striped">
                                 <thead>
@@ -84,7 +89,7 @@ $invoice->checkLoggedIn();
                                     </tr>
                                 </thead>
                                 <?php
-                                $invoiceList = $invoice->getInvoiceList();
+                                $invoiceList = $invoice->getInvoiceList5();
                                 foreach ($invoiceList as $invoiceDetails) {
 
                                     $invoiceDate = date("d/M/Y, H:i:s", strtotime($invoiceDetails["fecha_hoy"]));
@@ -94,9 +99,9 @@ $invoice->checkLoggedIn();
                                         <td>' . $invoiceDate . '</td>
                                         <td>' . $invoiceDetails["nombre"] . '</td>
                                         <td>' . $invoiceDetails["num_control_alumno"] . '</td>
-                                        <td><a href="../print_invoice.php?invoice_id=' . $invoiceDetails["idced"] . '" title="Imprimir "><div class="btn btn-primary"><span class="glyphicon glyphicon-print"></span></div></a></td>
-                                        <td><a href="../edit_invoice.php?update_id=' . $invoiceDetails["idced"] . '"  title="Editar "><div class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span></div></a></td>
-                                        <td><a href="#" id="' . $invoiceDetails["idced"] . '" class="deleteInvoice"  title="Borrar "><div class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></div></a></td>
+                                        <td><a href="./php/print_invoice.php?invoice_id=' . $invoiceDetails["idced"] . '" title="Imprimir "><div class="btn btn-success"><i class="fas fa-print"></i></div></a></td>
+                                        <td><a href="./php/edit_invoice.php?update_id=' . $invoiceDetails["idced"] . '"  title="Editar "><div class="btn btn-primary"><i class="fas fa-edit"></i></div></a></td>
+                                        <td><a href="#" id="' . $invoiceDetails["idced"] . '" class="deleteInvoice"  title="Borrar "><div class="btn btn-danger"><i class="far fa-trash-alt"></i></div></a></td>
                                     </tr>
                                     
                                     ';
@@ -135,9 +140,10 @@ $invoice->checkLoggedIn();
     <!-- AdminLTE for demo purposes -->
     <script src="./dashboard/dist/js/demo.js"></script>
     <!-- scripts de paloma -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+  
     <script type="text/javascript">
         $(document).ready(function() {
             $('#data-table').DataTable({
