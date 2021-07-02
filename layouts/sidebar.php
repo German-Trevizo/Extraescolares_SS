@@ -23,7 +23,7 @@
                 <li class="nav-item">
                     <a href="./controlPanel.php" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
-                        <img src="../img/deportes.png" class="" alt="">
+                        <!-- <img src="./img/deportes.png" class="" alt=""> -->
                         <p>
                             Inicio
                         </p>
@@ -39,7 +39,7 @@
                 </li>
                 <li class="nav-item">
                     <!--  <a href="php/invoice_list/invoice_list.php" class="nav-link">  -->
-                    <a href="./cedulas.php" class="nav-link">
+                    <a href="./c1.php" class="nav-link">
                         <i class="nav-icon fas fa-address-book"></i>
                         <p>
                             Cedula de Registro

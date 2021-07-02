@@ -64,7 +64,7 @@ $invoice->checkLoggedIn();
                 <div class="card">
                
                     <div class="card-header">
-                        <h3 class="card-title"> BASQUET BOL</h3>
+                        <h3 class="card-title">TAE KWON DO</h3>
 
                         <div class="card-tools">
                             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -75,7 +75,32 @@ $invoice->checkLoggedIn();
                     <div class="card-body">
                         <div class="container">
                           
-                            <?php include('./php/menu.php'); ?>
+                                   <div class="dropdown show">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   Elegir un Area...
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+<a href="c1.php">AJEDREZ</a>
+			<a class="dropdown-item" href="c3.php">ATLETISMO</a>
+			<a class="dropdown-item" href="c4.php">BANDA DE GUERRA</a>
+			<a class="dropdown-item" href="c5.php">BASQUET BOL</a>
+			<a class="dropdown-item" href="c6.php">BEISBOL</a>
+			<a class="dropdown-item" href="c7.php">DANZA</a>
+			<a class="dropdown-item" href="c8.php">KARATE DO</a>
+			<a class="dropdown-item" href="c9.php">MÚSICA</a>
+			<a class="dropdown-item" href="c10.php">OTRAS</a>
+			<a class="dropdown-item" href="c11.php">PESAS</a>
+			<a class="dropdown-item" href="c12.php">PINTURA</a>
+			<a class="dropdown-item" href="c13.php">SOCCER</a>
+			<a class="dropdown-item" href="c14.php">STAFF</a>
+			<a class="dropdown-item" href="c15.php">TAE KWON DO</a>
+			<a class="dropdown-item" href="c16.php">VOLEIBOL</a>
+  </div>
+</div>
+                      
+               <br>
+               <br>   
                             <table id="data-table" class="table table-condensed table-striped">
                                 <thead>
                                     <tr>
@@ -89,7 +114,7 @@ $invoice->checkLoggedIn();
                                     </tr>
                                 </thead>
                                 <?php
-                                $invoiceList = $invoice->getInvoiceList5();
+                                $invoiceList = $invoice->getInvoiceList15();
                                 foreach ($invoiceList as $invoiceDetails) {
 
                                     $invoiceDate = date("d/M/Y, H:i:s", strtotime($invoiceDetails["fecha_hoy"]));
@@ -143,7 +168,7 @@ $invoice->checkLoggedIn();
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
     <script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-  
+    <script src="./js/invoice.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $('#data-table').DataTable({
